@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.st10451774.centralink.LoginFragment"
+        android:label="Login">
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.st10451774.centralink.RegisterFragment"
+        android:label="Register">
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.st10451774.centralink.HomeFragment"
+        android:label="Home">
+        <action
+            android:id="@+id/action_homeFragment_to_mapFragment"
+            app:destination="@id/mapFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_announcementsFragment"
+            app:destination="@id/announcementsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.st10451774.centralink.MapFragment"
+        android:label="Map">
+        <action
+            android:id="@+id/action_mapFragment_to_announcementsFragment"
+            app:destination="@id/announcementsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/announcementsFragment"
+        android:name="com.st10451774.centralink.AnnouncementsFragment"
+        android:label="Announcements">
+        <action
+            android:id="@+id/action_announcementsFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+
+</navigation>
